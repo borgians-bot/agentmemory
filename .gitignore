@@ -8,7 +8,12 @@ dist/
 
 *.log
 .DS_Store
-.claude/
+.claude/*
+# Version the Willow workspace's hook config so auto-start + memory capture
+# persists across Claude Code web sessions; keep everything else local.
+!.claude/settings.json
+!.claude/hooks/
+.agentmemory-logs/
 
 plugin/scripts/*.map
 plugin/scripts/*.d.mts
